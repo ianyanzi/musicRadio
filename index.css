@@ -1,0 +1,261 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  a{
+    text-decoration: none;
+  }
+  
+  ul,li{
+    list-style: none;
+  }
+  
+  /* reset */
+  
+  html,body,section{
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .layout{
+    width: 900px;
+    margin: 0 auto;
+  }
+  
+  main{
+    height: calc(100% - 24vh);
+    padding-top: 12vh;
+  }
+  
+  main:after{
+    display: block;
+    content: '';
+    clear: both;
+  }
+  
+  
+  main .aside{
+    float: left;
+  }
+  
+  main .aside > figure{
+    width: 46vh;
+    height: 46vh;
+    background-image: url(http://cloud.hunger-valley.com/music/public_tuijian_spring.jpg-middle);
+    background-size: cover;
+    background-position: center center;
+  }
+  
+  main .actions{
+    display: flex;
+    margin: 4vh 0 0 0;
+  }
+  
+  main .actions .iconfont{
+    flex: 1;
+    font-size: 5vh;
+    color: #999999;
+    cursor: pointer;
+    text-align: center;
+    transition: color 0.3s;
+  }
+  
+  main .actions .iconfont:hover{
+    color: #555555;
+  }
+  
+  main .actions .iconfont:active{
+    color: #000000;
+  }
+  
+  main .detail{
+    margin-left: 56vh;
+    
+  }
+  
+  main .detail .tag{
+    font-size: 2vh;
+    padding: 0.4em 0.8em;
+    background: #2e6eec;
+  }
+  
+  main .detail h1{
+    font-size: 3vh;
+    margin-top:2vh;
+  }
+  
+  main .detail .icons{
+    display: flex;
+    font-size: 3vh;
+    margin-top: 12vh;
+    color: #ffffff;
+  }
+  
+  main .detail .icons li{
+    flex: 1;
+  }
+  
+  main .detail .iconfont{
+    font-size: 3vh;
+    margin-right: 1vh;
+  }
+  
+  main .detail .area-bar{
+    margin-top: 10vh;
+    display: flex;
+    align-items: center;
+  }
+  
+  main .detail .area-bar .bar{
+    position: relative;
+    flex: 1;
+    height: 0.8vh;
+    border-radius: 0.2vh;
+    background: rgba(255,255,255,0.4);
+  }
+  
+  main .detail .area-bar .current-time{
+    width: 3vh;
+    font-size: 2vh;
+    margin-left: 1vh;
+  }
+  
+  main .detail .area-bar .bar-progress{
+    position: absolute;
+    height: 0.8vh;
+    width: 0%;
+    transition: width 0.8s;
+    background: #fff;
+    border-radius: 0.2vh;
+  }
+  
+  main .detail .author{
+    font-size: 2vh;
+    margin-top:2vh;
+    color: #666666;
+  }
+  
+  main .detail .lyric{
+    font-size: 3vh;
+    margin-top: 3vh;
+    color: #888888;
+  }
+  
+  
+  
+  footer{
+    height: 24vh;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+    box-shadow: 0px -0.25vh 0.25vh 0.25vh rgba(255,255,255,0.2);
+  }
+  
+  footer > .layout{
+    position: relative;
+  }
+  
+  footer .box{
+    position: relative;
+    overflow: hidden;
+    height: 24vh;
+  }
+  
+  footer ul{
+    position: absolute;
+    left: 0;
+  }
+  
+  footer ul:after{
+    display: blcok;
+    content: '';
+    clear: both;
+  }
+  
+  footer li{
+    float: left;
+    margin-top: 1vh;
+    margin: 2vh 2vh 0 2vh;
+    width: 20vh;
+    height: 20vh;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  footer li:hover {
+    box-shadow: 0 0 .5vh .5vh rgba(255,255,255,0.8);
+  }
+  
+  footer li .cover{
+    height: 16vh;
+    background-size: cover;
+    background-position: center center;
+  }
+  
+  footer h3{
+    font-size: 2vh;
+    color: rgba(255,255,255,0.6);
+    margin-top: 1vh;
+  }
+  
+  footer .iconfont{
+    position: absolute;
+    top: 4vh;
+    font-size: 6vh;
+    color: rgba(255, 255, 255, 0.4);
+    opacity: 0;
+    transition: all .4s;
+    cursor: pointer;
+  }
+  
+  footer:hover .iconfont{
+    opacity: 1;
+  }
+  
+  footer .iconfont:hover{
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  footer .icon-arrow-right-copy{
+    left: -8vh;
+  }
+  
+  footer .icon-arrow-left{
+    right: -8vh;
+  }
+  
+  footer li.active {
+    box-shadow: 0 0 .5vh .5vh rgba(255,255,255,0.8);
+  
+  }
+  
+  
+  
+  
+  .bg{
+    position: absolute;
+    z-index: -1;
+    left: -10px;
+    top: -10px;
+    bottom: -10px;
+    right: -10px;
+    background: url(http://cloud.hunger-valley.com/music/public_tuijian_spring.jpg-big) center center no-repeat;
+    background-size: cover;
+    filter: blur(4px)
+  }
+  
+  .bg::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,0.2);  
+  }
+  
+  
+  .pg-cover{
+    display: none;
+  }
